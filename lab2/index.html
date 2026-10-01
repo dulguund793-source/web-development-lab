@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бүртгэлийн форм</title>
+</head>
+<body>
+  <header>
+    <h1>Бүртгэлийн анкет</h1>
+    <p>Доорх мэдээллийг үнэн зөв бөглөнө үү. * тэмдэгтэй талбар заавал бөглөнө.</p>
+  </header>
+
+  <main>
+    <form action="#" method="post">
+
+      <fieldset>
+        <legend>Хувийн мэдээлэл</legend>
+
+        <p>
+          <label for="name">Нэр *</label><br>
+          <input type="text" id="name" name="name"
+                 required minlength="2" maxlength="40"
+                 pattern="[A-Za-zА-Яа-яӨөҮүЁё\- ]{2,40}"
+                 title="Зөвхөн үсэг ашиглана (2-40 тэмдэгт)"
+                 placeholder="Таны нэр">
+        </p>
+
+        <p>
+          <label for="email">Имэйл *</label><br>
+          <input type="email" id="email" name="email"
+                 required placeholder="name@example.com">
+        </p>
+
+        <p>
+          <label for="password">Нууц үг *</label><br>
+          <input type="password" id="password" name="password"
+                 required minlength="8"
+                 pattern="(?=.*[A-Za-z])(?=.*\d).{8,}"
+                 title="Хамгийн багадаа 8 тэмдэгт, 1 үсэг, 1 тоо агуулсан байх"
+                 placeholder="Хамгийн багадаа 8 тэмдэгт">
+        </p>
+
+        <p>
+          <label for="birthdate">Төрсөн огноо *</label><br>
+          <input type="date" id="birthdate" name="birthdate" required>
+        </p>
+
+        <p>
+          <label for="phone">Утасны дугаар</label><br>
+          <input type="tel" id="phone" name="phone"
+                 pattern="[0-9]{8}"
+                 title="8 оронтой тоо оруулна"
+                 placeholder="99112233">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Хүйс *</legend>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Эрэгтэй</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Эмэгтэй</label>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Бусад</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Сонирхол</legend>
+        <input type="checkbox" id="web" name="interests" value="web">
+        <label for="web">Вэб хөгжүүлэлт</label><br>
+
+        <input type="checkbox" id="mobile" name="interests" value="mobile">
+        <label for="mobile">Мобайл апп</label><br>
+
+        <input type="checkbox" id="ai" name="interests" value="ai">
+        <label for="ai">Хиймэл оюун</label><br>
+
+        <input type="checkbox" id="games" name="interests" value="games">
+        <label for="games">Тоглоом хөгжүүлэлт</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Нэмэлт мэдээлэл</legend>
+
+        <p>
+          <label for="course">Курс *</label><br>
+          <select id="course" name="course" required>
+            <option value="">-- Сонгоно уу --</option>
+            <option value="1">1-р курс</option>
+            <option value="2">2-р курс</option>
+            <option value="3">3-р курс</option>
+            <option value="4">4-р курс</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="about">Өөрийн тухай</label><br>
+          <textarea id="about" name="about" rows="4" cols="40"
+                    maxlength="300"></textarea>
+        </p>
+      </fieldset>
+
+      <p>
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">Нөхцөлийг зөвшөөрч байна *</label>
+      </p>
+
+      <p>
+        <button type="submit">Бүртгүүлэх</button>
+        <button type="reset">Цэвэрлэх</button>
+      </p>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Вэб хөгжүүлэлт, Лаборатори 02</p>
+  </footer>
+</body>
+</html>
